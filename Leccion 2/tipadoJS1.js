@@ -1,13 +1,14 @@
 
-//number
-var numero = 4;
+let MiVariableLetDeFuncion;
 
-//string
-var texto = "Hola mundo"
+while (true)
+{
+    MiVariableLetDeFuncion = "Soy un string";
+    break;
+}
 
-//Numero con coma
-var NumeroFlotante = 3.14;
+console.log(MiVariableLetDeFuncion);
+console.log(typeof(MiVariableLetDeFuncion));
 
-console.log(numero);
-console.log(texto);
-console.log(NumeroFlotante);
+MiVariableLetDeFuncion = 40;
+console.log(typeof(MiVariableLetDeFuncion));

@@ -12,7 +12,6 @@ console.log(totalFor);
 
 
 //Factorial de 10 con while
-
 let counter = 1;
 let totalWhile = 1;
 

@@ -1,36 +1,34 @@
 
-// Creación y acceso a objetos
-
-const obj = {
-    id: 4,
-    nombre: "Juan",
-    apellido: "Gonzalez",
-    isDeveloper: true,
-    libros_favoritos: ["El metodo", "El codigo"],
-    "4-cosas": "Hola"
+let misDatos = {
+    nombre:"Lucas",
+    apellido:"Laino",
+    edad:37,
+    altura:1.80,
+    eresDesarrollador:true,
 }
 
-console.log(obj.id);
-console.log(obj["4-cosas"]);
+let miEdad = misDatos.edad;
+console.log(miEdad);
 
-// Dupicar Objeto
 
-const obj2 = { ...obj};
-obj.apellido = "Laino";
-console.log(obj2);
+// 
+const datosAmigo1 = {
+    nombre:"Agustin",
+    apellido:"Grippo",
+    edad:35,
+    altura:1.80,
+    eresDesarrollador:false,
+}
 
-// Ordenar objetos
+const datosAmigo2 = {
+    nombre:"Gaston",
+    apellido:"Tojo",
+    edad:40,
+    altura:1.80,
+    eresDesarrollador:false,
+}
 
-var products = [
-    { id: 1, name: "Leche", price: 120, categories: ["familiar", "comida"] },
-    { id: 2, name: "Arroz", price: 80, categories: ["familiar", "comida"] },
-    { id: 3, name: "Lavadora", price: 7800, categories: ["electrodomésticos"] }
-];
+let conjuntoDatos = [misDatos, datosAmigo1, datosAmigo2];
 
-/*products.sort((a, b) =>{
-    return a.price - b.price;
-});*/
-
-products.sort((a, b) => a.price - b.price);
-
-console.log(products);
+conjuntoDatos.sort((a, b) => b.edad - a.edad)
+console.log(conjuntoDatos)

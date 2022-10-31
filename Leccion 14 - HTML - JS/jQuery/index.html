@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajando con jQuery</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1>Trabajando con jQuery</h1>
+
+    <ul>
+        <li id="el-1">Elemento 1</li>
+        <li id="el-2">Elemento 2</li>
+        <li id="el-3">Elemento 3</li>
+    </ul>
+
+    <button id="Ocultar">Hide</button>
+    <button id="Mostar">Show</button>
+    <br><br>
+    <button class="new-element">Add Element</button>
+
+</body>
+
+<script>
+
+    $(document).ready(() => {
+
+        
+        $("#Ocultar").click(function(){
+            $("#el-1").fadeOut()
+        })
+
+        $("#Mostar").click(function(){
+            $("#el-1").fadeIn()
+        })
+
+        $("#el-1").dblclick(() => {
+            $("h1").css({ color: "red"})
+        })
+
+        let i = 4;
+
+        $(".new-element").click(() => {
+            $("ul").append("<li>Elemento " + i + "</li>")
+            i++
+        })
+
+        $("li").mouseover((elem) => {
+            elem.target.style.color = "blue"
+        })
+
+        $("li").mouseout((elem) => {
+            elem.target.style.color = "black"
+        })
+    })
+
+</script>
+
+</html>

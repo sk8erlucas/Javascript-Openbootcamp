@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialogos</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    
+    <h1>Dialogos por pantalla</h1>
+
+    <button id="btn">Boton</button>
+    <button id="info">Mas Información</button>
+
+</body>
+
+<script>
+    
+    $("#btn").click(() => {
+
+        //alert("Click!")
+        //confirm("Desea continuar?") && console.log("Ok")
+
+        confirm("Desea continuar?")
+            ? console.log("Ok")
+            : console.log("Not okay")
+    })
+
+    $("#info").click(() => {
+        const nombre = prompt("Cual es tu nombre?")
+
+        if(nombre) {
+            console.log("Tu nombre es " + nombre)
+        }
+        else {
+            console.log("No se ingreso nombre")
+        }
+    })
+
+    const lista = [
+        {
+            nombre: "Lucas",
+            edad: 36},
+        {
+            nombre: "Juan",
+            edad: 50
+        }]
+
+    console.table(lista)
+</script>
+</html>

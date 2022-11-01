@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistencia</title>
+</head>
+
+<body>
+    <h1>Persistencia de datos en el navegador</h1>
+</body>
+
+<script>
+    
+    // Local Storage
+
+    localStorage.setItem("nombre", "Lucas")
+    localStorage.setItem("nombre", "Juan")
+
+    console.log(localStorage.getItem("nombre"))
+
+    localStorage.setItem("persona", JSON.stringify({nombre:"Lucas", edad: 36}))
+    console.log(JSON.parse(localStorage.getItem("persona")))
+
+    localStorage.removeItem("nombre")
+
+    // Sesion Storage
+
+    sessionStorage.setItem("tecnologias", ["HTML", "CSS", "JS"])
+
+    // Cookies
+    document.cookie = "nombre-cookie=LucasCookie"
+    document.cookie = "nombreCaducidad=CookieCaducidad; expires=" + new Date(2023, 0, 1).toUTCString()
+
+    console.log(document.cookie)
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistencia de Datos - Entrega</title>
+
+</head>
+
+<body>
+
+    <h1>Entrega Sesion 15</h1>
+</body>
+
+<script>
+
+    let nom = "Lucas"
+    let ap = "Laino"
+
+    const NombreApellido = {
+        nombre: nom,
+        apellido: ap
+    }
+
+    console.log(NombreApellido)
+
+    sessionStorage.setItem("persona", JSON.stringify(NombreApellido))
+    localStorage.setItem("persona", JSON.stringify(NombreApellido))
+	
+    var minutos2 = new Date( Date.now() + 1000 * 60 * 2 );
+
+    console.log(minutos2)
+
+    document.cookie = "persona=" + JSON.stringify(NombreApellido) + "; expires=" + minutos2.toUTCString()
+
+</script>
+
+</html>
